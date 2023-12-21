@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const { AuthA } = require("../middleware");
-
-const {adminLogin, adminRegister,addProduct,deleteProduct,updateProduct,show  } = require("../models/admin");
+const {addProduct,deleteProduct,updateProduct,show}=require("../models/product")
+const {adminLogin, adminRegister  } = require("../models/admin");
 
 
 

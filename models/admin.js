@@ -83,4 +83,5 @@ const adminRegister = (req, res) => {
 module.exports = {
   adminLogin,
   adminRegister,
+  
 };
