@@ -28,7 +28,7 @@ const login = (req, res) => {
                                                 username: result.rows[0].username,
                                                 role: result.rows[0].role,
                                             },
-                                            // process.env.SECRET_KEY
+                                            process.env.USER_KEY
                                         );
                                         res.json({
                                             message: "Login success",

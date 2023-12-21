@@ -7,7 +7,9 @@ async function AddOrder(req, res) {
   
   );
   res.send(result.rows);
+  
 }
+
 
 module.exports = {
   AddOrder,

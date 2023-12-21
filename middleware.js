@@ -1,20 +1,20 @@
 const jwt = require("jsonwebtoken");
 
-async function AuthA(req, res, next) {
+const AuthA = (req, res, next) => {
   let token = req.headers.token;
-  jwt.verify(token, "admin", function (err, decoded) {
+  jwt.verify(token, "admin", (err, decoded) => {
     if (decoded) {
       next();
-    } else res.status(401).send({ success: false, msg: "Unauthorized!" });
+    } else res.status(401).send({ success: false, msg: "Unauthorized!",error:err.message });
   });
-}
+};
 
 async function AuthU(req, res, next) {
   let token = req.headers.token;
-  jwt.verify(token, "user", function (err, decoded) {
+  jwt.verify(token, "user",  (err, decoded)=> {
     if (decoded) {
       next();
-    } else res.status(401).send({ success: false, msg: "Unauthorized!" });
+    } else res.status(401).send({ success: false, msg: "Unauthorized!",error:err.message });
   });
 }
 
