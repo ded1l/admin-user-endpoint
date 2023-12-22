@@ -48,6 +48,7 @@ const adminLogin = (req, res) => {
     );
   } catch (error) {
     console.error(error);
+    res.status(500).json({ error: 'An error occurred' });
   }
 };
 
@@ -83,5 +84,6 @@ const adminRegister = (req, res) => {
 module.exports = {
   adminLogin,
   adminRegister,
+  
   
 };

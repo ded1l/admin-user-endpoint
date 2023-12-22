@@ -5,7 +5,7 @@ const port = 3000;
 app.use(express.json());
 
 const admin = require("./routes/admin");
-const users = require("./routes/users");
+const users = require("./routes/user");
 
 
 app.get("/", (req, res) => {
@@ -13,8 +13,8 @@ app.get("/", (req, res) => {
 });
 
 
-app.use("/api/v1/admin", admin);
-app.use("/api/v1/user", users);
+app.use("/api/v1/admin",admin );
+app.use("/api/v1/user", users );
 
 
 

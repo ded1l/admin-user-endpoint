@@ -17,4 +17,5 @@ router.post("/products/add",AuthA, addProduct);
 router.delete("/products/delete/:id",AuthA, deleteProduct);
 router.put("/products/update/:id",AuthA ,updateProduct);
 
-exports.router = router;
+
+module.exports = router;
